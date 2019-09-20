@@ -2,8 +2,8 @@ import java.util.HashSet;
 
 public class WorkExperience {
 
-    String company;
     String jobTitle;
+    String company;
     String startDate;
     String endDate;
     String jobDescription;
@@ -12,6 +12,14 @@ public class WorkExperience {
 
     public WorkExperience(){
         workExperiences = new HashSet<>();
+    }
+
+    public WorkExperience(String jobTitle, String company, String startDate, String endDate, String jobDescription) {
+        this.jobTitle = jobTitle;
+        this.company = company;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.jobDescription = jobDescription;
     }
 
     public String getCompany() {
@@ -64,5 +72,13 @@ public class WorkExperience {
 
     public void addExperience(WorkExperience workExperience){
         workExperiences.add(workExperience);
+    }
+
+    public void displayExperience(){
+        for(WorkExperience wExperience : this.getWorkExperiences()){
+            System.out.println("\n" + wExperience.getJobTitle()+ " \n" + wExperience.getCompany()+ ", \t" +
+                    wExperience.getStartDate() + " - " + wExperience.getEndDate() + "\n" +
+                    wExperience.getJobDescription());
+        }
     }
 }

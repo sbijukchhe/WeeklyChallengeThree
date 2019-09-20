@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6afbb16e-1604-42ee-bf3c-f873856c85c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeeklyChallenge3/Education.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeeklyChallenge3/Education.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WeeklyChallenge3/ResumeApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeeklyChallenge3/ResumeApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeeklyChallenge3/Skill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeeklyChallenge3/Skill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeeklyChallenge3/WorkExperience.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeeklyChallenge3/WorkExperience.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Education.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ResumeApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResumeApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkExperience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkExperience.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568921383557</updated>
       <workItem from="1568921388569" duration="5260000" />
-      <workItem from="1568935096198" duration="9188000" />
+      <workItem from="1568935096198" duration="14758000" />
     </task>
     <servers />
   </component>

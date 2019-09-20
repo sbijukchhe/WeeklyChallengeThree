@@ -13,6 +13,11 @@ public class Skill {
         skills = new HashSet<>();
     }
 
+    public Skill(String skillName, String proficiency) {
+        this.skillName = skillName;
+        this.proficiency = proficiency;
+    }
+
     public String getSkillName() {
         return skillName;
     }
@@ -40,5 +45,11 @@ public class Skill {
     public void addSkill(Skill newSkill)
     {
         this.skills.add(newSkill);
+    }
+
+    public void displaySkill(){
+        for(Skill sk : this.getSkills()){
+            System.out.println(sk.getSkillName()+ ",\t " + sk.getProficiency());
+        }
     }
 }

@@ -13,6 +13,13 @@ public class Education {
         educations = new HashSet<>();
     }
 
+    public Education(String degreeType, String major, String universityName, String graduationYear) {
+        this.degreeType = degreeType;
+        this.major = major;
+        this.universityName = universityName;
+        this.graduationYear = graduationYear;
+    }
+
     public String getDegreeType() {
         return degreeType;
     }
@@ -55,5 +62,12 @@ public class Education {
 
     public void addEducation(Education newEducation){
         this.educations.add(newEducation);
+    }
+
+    public void displayEducation(){
+        for(Education edu : this.getEducations()){
+            System.out.println( "\n" + edu.getDegreeType()+ " in " + edu.getMajor()+ ", \n" + edu.getUniversityName() +
+                    ", " + edu.getGraduationYear());
+        }
     }
 }
