@@ -8,6 +8,9 @@ public class ResumeApp {
         Skill coreSkill = new Skill();
         coreSkill.setSkillName("Core Skills");
 
+        Education education = new Education();
+        WorkExperience workExperience = new WorkExperience();
+
         // Request the name of applicant
         System.out.println("Please enter your name ");
         String name = input.nextLine();
@@ -15,6 +18,45 @@ public class ResumeApp {
         // Request the email of applicant
         System.out.println("Please enter your email address ");
         String emailAdd = input.nextLine();
+
+        // Request for Education details
+        // First degree
+        System.out.println("Please enter your Degree type - Associate's, Bachelor's, Master's, PhD, etc. ");
+        String degreeType = input.nextLine();
+        System.out.println("Please enter your major ");
+        String major = input.nextLine();
+        System.out.println("Please enter your University name ");
+        String univName = input.nextLine();
+        System.out.println("Please enter your Graduation year ");
+        String gradYear = input.nextLine();
+
+        Education educationOne = new Education();
+        educationOne.setDegreeType(degreeType);
+        educationOne.setMajor(major);
+        educationOne.setUniversityName(univName);
+        educationOne.setGraduationYear(gradYear);
+        education.addEducation(educationOne);
+
+        // Request for Work experience
+        System.out.println("Please enter your Job title ");
+        String jTitle = input.nextLine();
+        System.out.println("Please enter your Company name ");
+        String cName = input.nextLine();
+        System.out.println("Please enter your job Start date - month year (eg September 2019)");
+        String startDate = input.nextLine();
+        System.out.println("Please enter your job End date - month year (eg September 2019)");
+        String endDate = input.nextLine();
+        System.out.println("Please enter Job description ");
+        String jobDescription = input.nextLine();
+
+        WorkExperience workExperienceOne = new WorkExperience();
+        workExperienceOne.setJobTitle(jTitle);
+        workExperienceOne.setCompany(cName);
+        workExperienceOne.setStartDate(startDate);
+        workExperienceOne.setEndDate(endDate);
+        workExperienceOne.setJobDescription(jobDescription);
+        workExperience.addExperience(workExperienceOne);
+
 
         // Request the name of skills
         System.out.println("Please enter your skills ");
@@ -66,8 +108,39 @@ public class ResumeApp {
         System.out.println(name);
         System.out.println(emailAdd);
 
+        // Printing education details
+        System.out.println("\n\nEducation");
+        System.out.println("-----------");
+        ArrayList<String> eduDetails  = new ArrayList<>();
+        for(Education edu : education.getEducations())
+        {
+            eduDetails.add(edu.degreeType);
+            eduDetails.add(edu.major);
+            eduDetails.add(edu.universityName);
+            eduDetails.add(edu.graduationYear);
+            System.out.println(edu.getDegreeType()+ " in " + edu.getMajor()+ ", \n" + edu.getUniversityName() +
+                    ", " + edu.getGraduationYear());
+        }
+
+        // Printing Work Experience
+        System.out.println("\n\nExperience");
+        System.out.println("-----------");
+        ArrayList<String> experienceDetails  = new ArrayList<>();
+        for(WorkExperience wExperience : workExperience.getWorkExperiences())
+        {
+            experienceDetails.add(wExperience.jobTitle);
+            experienceDetails.add(wExperience.company);
+            experienceDetails.add(wExperience.startDate);
+            experienceDetails.add(wExperience.endDate);
+            experienceDetails.add(wExperience.jobDescription);
+
+            System.out.println(wExperience.getJobTitle()+ " \n" + wExperience.getCompany()+ ", \t" +
+                    wExperience.getStartDate() + " - " + wExperience.getEndDate() + "\n" +
+                    wExperience.getJobDescription());
+        }
         // printing skills
         System.out.println("\n\nSkills");
+        System.out.println("-----------");
         ArrayList<String> skillSets  = new ArrayList<>();
         for(Skill sk : coreSkill.getSkills())
         {
